@@ -1,0 +1,16 @@
+export default {
+  bg: '#030712',
+  surface: '#111827',
+  surface2: '#1f2937',
+  border: '#374151',
+  text: '#ffffff',
+  textSec: '#9ca3af',
+  muted: '#6b7280',
+  accent: '#6366f1',
+  accentDark: '#4338ca',
+  accentBg: 'rgba(99,102,241,0.15)',
+  online: '#4ade80',
+  error: '#f87171',
+  myBubble: '#6366f1',
+  theirBubble: '#1f2937',
+}
