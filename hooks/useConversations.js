@@ -84,11 +84,13 @@ export function useConversations() {
   }
 
   const createGroup = async (name, memberIds = []) => {
-    const { data: conv } = await supabase
+    const { data: conv, error } = await supabase
       .from('conversations')
       .insert({ type: 'group', name, created_by: user.id })
       .select()
       .single()
+
+    if (error || !conv) return null
 
     const members = [user.id, ...memberIds].map((uid, i) => ({
       conversation_id: conv.id,
